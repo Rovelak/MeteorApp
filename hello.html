@@ -1,0 +1,23 @@
+<head>
+  <title>hello</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> articles}}
+  {{> addArticle}}
+</body>
+
+<template name="articles">
+  {{#each article}}
+      <li class="title {{selectedClass}}">{{title}} {{content}}</li>
+  {{/each}}
+</template>
+
+<template name="addArticle">
+    <form>
+        <input type="text" name="articleTitle">
+        <input type="text" name="articleContent">
+        <input type="submit" value="Post Article">
+    </form>
+</template>
